@@ -1,0 +1,47 @@
+USE SCHEMA DEMO_PARALLELS.RAW;
+
+CREATE OR REPLACE TABLE RAW_SURVEYS (
+    ID               INT AUTOINCREMENT,
+    SURVEY_ID        VARCHAR,
+    RESPONSE_ID      VARCHAR,
+    RESPONDENT_EMAIL VARCHAR,
+    SUBMITTED_AT     TIMESTAMP,
+    BODY             VARCHAR
+);
+
+INSERT INTO RAW_SURVEYS (SURVEY_ID, RESPONSE_ID, RESPONDENT_EMAIL, SUBMITTED_AT, BODY) VALUES
+('SRV-NPS-2024Q4', 'RSP-001', 'user1@example.com', '2024-11-01 10:00:00', '{"nps_score":9,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Love the seamless integration"},{"question_id":"Q2","answer":"Performance is excellent"}]}'),
+('SRV-NPS-2024Q4', 'RSP-002', 'user2@example.com', '2024-11-01 11:30:00', '{"nps_score":7,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Good but pricey"},{"question_id":"Q2","answer":"Mostly stable"}]}'),
+('SRV-NPS-2024Q4', 'RSP-003', 'user3@corp.com', '2024-11-01 14:00:00', '{"nps_score":10,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Best virtualization on Mac"},{"question_id":"Q2","answer":"Use it daily for development"}]}'),
+('SRV-NPS-2024Q4', 'RSP-004', 'dev4@startup.io', '2024-11-01 16:00:00', '{"nps_score":3,"satisfaction":2,"answers":[{"question_id":"Q1","answer":"Too many crashes lately"},{"question_id":"Q2","answer":"Considering switching to UTM"}]}'),
+('SRV-NPS-2024Q4', 'RSP-005', 'admin5@enterprise.com', '2024-11-02 08:00:00', '{"nps_score":8,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Great for our team"},{"question_id":"Q2","answer":"Business edition management is useful"}]}'),
+('SRV-NPS-2024Q4', 'RSP-006', 'user6@example.com', '2024-11-02 09:30:00', '{"nps_score":6,"satisfaction":3,"answers":[{"question_id":"Q1","answer":"OK product"},{"question_id":"Q2","answer":"Wish it was cheaper"}]}'),
+('SRV-NPS-2024Q4', 'RSP-007', 'designer7@agency.com', '2024-11-02 11:00:00', '{"nps_score":9,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Coherence mode is amazing"},{"question_id":"Q2","answer":"Run Adobe on Mac and Windows seamlessly"}]}'),
+('SRV-NPS-2024Q4', 'RSP-008', 'eng8@tech.co', '2024-11-02 13:30:00', '{"nps_score":2,"satisfaction":1,"answers":[{"question_id":"Q1","answer":"Linux VM networking keeps breaking"},{"question_id":"Q2","answer":"Support was unhelpful"}]}'),
+('SRV-NPS-2024Q4', 'RSP-009', 'pm9@corp.com', '2024-11-02 15:00:00', '{"nps_score":8,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Solid product"},{"question_id":"Q2","answer":"Arm Windows works great"}]}'),
+('SRV-NPS-2024Q4', 'RSP-010', 'user10@gmail.com', '2024-11-03 08:30:00', '{"nps_score":10,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Perfect for running Windows on M3"},{"question_id":"Q2","answer":"Fast boot times"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-011', 'user11@example.com', '2024-11-03 09:00:00', '{"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Support was fast"},{"question_id":"Q2","answer":"Issue resolved in one call"},{"question_id":"Q3","answer":"Agent was knowledgeable"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-012', 'user12@company.com', '2024-11-03 10:30:00', '{"satisfaction":2,"answers":[{"question_id":"Q1","answer":"Long wait time"},{"question_id":"Q2","answer":"Had to explain issue 3 times"},{"question_id":"Q3","answer":"Still not fixed"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-013', 'dev13@startup.io', '2024-11-03 12:00:00', '{"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Chat support was excellent"},{"question_id":"Q2","answer":"Fixed my networking issue quickly"},{"question_id":"Q3","answer":"Would use chat again"}]}'),
+('SRV-NPS-2024Q4', 'RSP-014', 'user14@university.edu', '2024-11-03 14:00:00', '{"nps_score":7,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Good for academic use"},{"question_id":"Q2","answer":"Student discount appreciated"}]}'),
+('SRV-NPS-2024Q4', 'RSP-015', 'it15@finance.com', '2024-11-03 15:30:00', '{"nps_score":8,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Reliable for compliance testing"},{"question_id":"Q2","answer":"Snapshot feature is a lifesaver"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-016', 'user16@example.com', '2024-11-04 08:00:00', '{"satisfaction":3,"answers":[{"question_id":"Q1","answer":"Email response took 2 days"},{"question_id":"Q2","answer":"Eventually got help"},{"question_id":"Q3","answer":"Prefer phone next time"}]}'),
+('SRV-NPS-2024Q4', 'RSP-017', 'gamer17@home.com', '2024-11-04 09:30:00', '{"nps_score":5,"satisfaction":3,"answers":[{"question_id":"Q1","answer":"Gaming performance not great"},{"question_id":"Q2","answer":"DirectX support limited"}]}'),
+('SRV-NPS-2024Q4', 'RSP-018', 'admin18@corp.com', '2024-11-04 11:00:00', '{"nps_score":9,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Deploy VMs across team easily"},{"question_id":"Q2","answer":"Business edition is worth it"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-019', 'user19@example.com', '2024-11-04 13:00:00', '{"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Phone support was great"},{"question_id":"Q2","answer":"Agent walked me through upgrade"},{"question_id":"Q3","answer":"Very professional"}]}'),
+('SRV-NPS-2024Q4', 'RSP-020', 'dev20@tech.co', '2024-11-04 14:30:00', '{"nps_score":8,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Docker in Linux VM works well"},{"question_id":"Q2","answer":"Need better resource management"}]}'),
+('SRV-NPS-2024Q4', 'RSP-021', 'user21@example.com', '2024-11-04 16:00:00', '{"nps_score":4,"satisfaction":2,"answers":[{"question_id":"Q1","answer":"Too expensive for personal use"},{"question_id":"Q2","answer":"Free alternatives catching up"}]}'),
+('SRV-NPS-2024Q4', 'RSP-022', 'eng22@bigco.com', '2024-11-05 08:00:00', '{"nps_score":9,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Essential for cross-platform dev"},{"question_id":"Q2","answer":"Seamless IDE integration"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-023', 'user23@example.com', '2024-11-05 09:30:00', '{"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Chat resolved quickly"},{"question_id":"Q2","answer":"Good knowledge base too"},{"question_id":"Q3","answer":"Satisfied overall"}]}'),
+('SRV-NPS-2024Q4', 'RSP-024', 'admin24@school.edu', '2024-11-05 11:00:00', '{"nps_score":7,"satisfaction":3,"answers":[{"question_id":"Q1","answer":"Works well for lab environments"},{"question_id":"Q2","answer":"Wish there was a classroom license"}]}'),
+('SRV-NPS-2024Q4', 'RSP-025', 'user25@gmail.com', '2024-11-05 12:30:00', '{"nps_score":10,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Best purchase for my M2 Mac"},{"question_id":"Q2","answer":"Windows runs perfectly"}]}'),
+('SRV-NPS-2024Q4', 'RSP-026', 'sysadm26@enterprise.com', '2024-11-05 14:00:00', '{"nps_score":8,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Great MDM integration"},{"question_id":"Q2","answer":"Deployment is straightforward"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-027', 'user27@example.com', '2024-11-05 15:30:00', '{"satisfaction":1,"answers":[{"question_id":"Q1","answer":"30 min hold time"},{"question_id":"Q2","answer":"Transferred 3 times"},{"question_id":"Q3","answer":"Problem not solved"}]}'),
+('SRV-NPS-2024Q4', 'RSP-028', 'dev28@startup.io', '2024-11-06 08:00:00', '{"nps_score":6,"satisfaction":3,"answers":[{"question_id":"Q1","answer":"Decent but resource hungry"},{"question_id":"Q2","answer":"RAM usage too high"}]}'),
+('SRV-NPS-2024Q4', 'RSP-029', 'user29@corp.com', '2024-11-06 09:30:00', '{"nps_score":9,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Replaced our VDI infrastructure"},{"question_id":"Q2","answer":"Cost savings significant"}]}'),
+('SRV-NPS-2024Q4', 'RSP-030', 'user30@home.com', '2024-11-06 10:30:00', '{"nps_score":8,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Easy to use"},{"question_id":"Q2","answer":"Setup took under 30 minutes"}]}'),
+('SRV-NPS-2024Q4', 'RSP-031', 'qa31@tech.co', '2024-11-06 11:00:00', '{"nps_score":9,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Essential for testing across OS"},{"question_id":"Q2","answer":"Snapshot and clone are fantastic"}]}'),
+('SRV-CSAT-2024Q4', 'RSP-032', 'user32@example.com', '2024-11-06 12:00:00', '{"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Good response time"},{"question_id":"Q2","answer":"Fixed audio issue"},{"question_id":"Q3","answer":"Happy with outcome"}]}'),
+('SRV-NPS-2024Q4', 'RSP-033', 'cto33@corp.com', '2024-11-06 13:00:00', '{"nps_score":10,"satisfaction":5,"answers":[{"question_id":"Q1","answer":"Our entire dev team relies on it"},{"question_id":"Q2","answer":"ROI is clear"}]}'),
+('SRV-NPS-2024Q4', 'RSP-034', 'user34@gmail.com', '2024-11-06 14:00:00', '{"nps_score":1,"satisfaction":1,"answers":[{"question_id":"Q1","answer":"Lost my VM data after update"},{"question_id":"Q2","answer":"No warning, no backup option"}]}'),
+('SRV-NPS-2024Q4', 'RSP-035', 'user35@example.com', '2024-11-06 15:00:00', '{"nps_score":7,"satisfaction":4,"answers":[{"question_id":"Q1","answer":"Generally good experience"},{"question_id":"Q2","answer":"Occasional slowdowns"}]}');
